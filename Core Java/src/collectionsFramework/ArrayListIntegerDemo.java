@@ -1,6 +1,7 @@
 package collectionsFramework;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 public class ArrayListIntegerDemo {
@@ -32,6 +33,41 @@ public class ArrayListIntegerDemo {
 			System.out.println(itr.next());
 		}
 		
+		//CRUD
+		
+		//Create
+		System.out.println("\nCreate");
+		list.add(99);
+		list.add(2, 22);
+		System.out.println(list);
+		
+		//Update
+		System.out.println("\nUpdate");
+		try {			
+			list.set(list.indexOf(22), 23);
+		} catch (Exception e) {
+			System.out.println("Element not found");
+		}
+		System.out.println(list);
+		
+		//Read
+		System.out.println("\nRead");
+		System.out.println(list.get(0));
+		
+		//Delete
+		System.out.println("\nDelete");
+		list.remove(0);
+		System.out.println(list);
+		
+		//sort
+		System.out.println("\nSort ASC");
+		Collections.sort(list);
+		System.out.println(list);
+		
+		//reverse
+		System.out.println("\nReverse");
+		Collections.reverse(list);
+		System.out.println(list);
 	}
 
 }
